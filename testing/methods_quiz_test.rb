@@ -25,4 +25,11 @@ t.create("methods_quiz")
         t.test("28 is closer to 30", [1,28,30], 28),
         t.test("32 and 48are the same distance to 30", [28,32,30], 0)
     ])
+    t.new_test("two_as_one?")
+    t.function_test([
+        t.test("can add two of them", [1,2,3], true),
+        t.test("can add two of them", [3,2,1], true),
+        t.test("can add two of them", [1,3,2], true),
+        t.test("cant add two of them", [1,1,1], false)
+    ])
 t.write(File.basename(__FILE__))

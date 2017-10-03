@@ -44,4 +44,18 @@ describe 'methods_quiz' do
 			closer_to(28,32,30).must_equal(0)
 		end
 	end
+	describe 'two_as_one?' do
+		it 'can add two of them' do
+			two_as_one?(1,2,3).must_equal(true)
+		end
+		it 'can add two of them' do
+			two_as_one?(3,2,1).must_equal(true)
+		end
+		it 'can add two of them' do
+			two_as_one?(1,3,2).must_equal(true)
+		end
+		it 'cant add two of them' do
+			two_as_one?(1,1,1).must_equal(false)
+		end
+	end
 end
