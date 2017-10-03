@@ -13,5 +13,11 @@ t.create("methods_quiz")
         t.test("adds not to hot", ["hot"], "not hot"),
         t.test("returns not hot", ["not hot"], "not hot")
     ])
+    t.new_test("icy_hot?")
+    t.function_test([
+        t.test("one is icy and the other is hot", [-2, 101], true),
+        t.test("one is icy and the other is hot", [-101, 1002], true),
+        t.test("neither are icy or hot", [1, 1], false)
+    ])
 
 t.write(File.basename(__FILE__))
