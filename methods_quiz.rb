@@ -8,7 +8,7 @@ end
 # TODO - write not_string
 
 def not_string(str)
-    return str[0..3] == "not " ? str : "not #{str}"
+    return str[0..2] == "not" ? str : "not#{str}"
 end
 
 # TODO - write icy_hot?
