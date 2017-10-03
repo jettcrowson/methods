@@ -14,4 +14,12 @@ describe 'methods_quiz' do
 			has_teen?(1,2,3).must_equal(false)
 		end
 	end
+	describe 'not_string' do
+		it 'adds not to hot' do
+			not_string('hot').must_equal('not hot')
+		end
+		it 'returns not hot' do
+			not_string('not hot').must_equal('not hot')
+		end
+	end
 end
