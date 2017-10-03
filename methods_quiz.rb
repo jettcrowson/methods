@@ -7,6 +7,14 @@ end
 
 # TODO - write not_string
 
+def not_string(str)
+    if str[0..2] == "not"
+        return str
+    else
+        return "not #{str}"
+    end
+end
+
 # TODO - write icy_hot?
 
 # TODO - write closer_to
