@@ -35,13 +35,19 @@ describe 'methods_quiz' do
 	end
 	describe 'closer_to' do
 		it '32 is closer to 30' do
-			closer_to(1,32,30).must_equal(32)
+			closer_to(30,1,32).must_equal(32)
 		end
 		it '28 is closer to 30' do
-			closer_to(1,28,30).must_equal(28)
+			closer_to(30,28,1).must_equal(28)
+		end
+		it '28 is closer to 30' do
+			closer_to(7,8,10).must_equal(8)
+		end
+		it '-12 is closer to -8' do
+			closer_to(-8,0,-12).must_equal(-12)
 		end
 		it '32 and 48are the same distance to 30' do
-			closer_to(28,32,30).must_equal(0)
+			closer_to(30,28,32).must_equal(0)
 		end
 	end
 	describe 'two_as_one?' do

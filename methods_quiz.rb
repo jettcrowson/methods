@@ -8,7 +8,7 @@ end
 # TODO - write not_string
 
 def not_string(str)
-    return str[0..2] == "not" ? str : "not #{str}"
+    return str[0..3] == "not " ? str : "not #{str}"
 end
 
 # TODO - write icy_hot?
@@ -19,7 +19,7 @@ end
 
 # TODO - write closer_to
 
-def closer_to(a,b,c)
+def closer_to(c,a,b)
     if (c - b).abs == (c - a).abs
         return 0
     elsif (c - a).abs < (c - b).abs

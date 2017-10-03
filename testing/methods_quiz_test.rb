@@ -21,9 +21,11 @@ t.create("methods_quiz")
     ])
     t.new_test("closer_to")
     t.function_test([
-        t.test("32 is closer to 30", [1,32,30], 32),
-        t.test("28 is closer to 30", [1,28,30], 28),
-        t.test("32 and 48are the same distance to 30", [28,32,30], 0)
+        t.test("32 is closer to 30", [30,1,32], 32),
+        t.test("28 is closer to 30", [30,28,1], 28),
+        t.test("28 is closer to 30", [7,8,10], 8),
+        t.test("-12 is closer to -8", [-8,0,-12], -12),
+        t.test("32 and 48are the same distance to 30", [30,28,32], 0)
     ])
     t.new_test("two_as_one?")
     t.function_test([
