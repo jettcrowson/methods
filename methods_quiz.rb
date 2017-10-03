@@ -8,14 +8,14 @@ end
 # TODO - write not_string
 
 def not_string(str)
-    if str[0..2] == "not"
-        return str
-    else
-        return "not #{str}"
-    end
+    return str[0..2] == "not" ? str : "not #{str}"
 end
 
 # TODO - write icy_hot?
+
+def icy_hot?(temp1, temp2)
+    return temp1 < 0 && temp2 > 100 || temp2 < 0 && temp1 > 100 ? true : false
+end
 
 # TODO - write closer_to
 
