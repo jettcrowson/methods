@@ -33,4 +33,15 @@ describe 'methods_quiz' do
 			icy_hot?(1,1).must_equal(false)
 		end
 	end
+	describe 'closer_to' do
+		it '32 is closer to 30' do
+			closer_to(1,32,30).must_equal(32)
+		end
+		it '28 is closer to 30' do
+			closer_to(1,28,30).must_equal(28)
+		end
+		it '32 and 48are the same distance to 30' do
+			closer_to(28,32,30).must_equal(0)
+		end
+	end
 end

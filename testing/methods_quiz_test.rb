@@ -19,5 +19,10 @@ t.create("methods_quiz")
         t.test("one is icy and the other is hot", [-101, 1002], true),
         t.test("neither are icy or hot", [1, 1], false)
     ])
-
+    t.new_test("closer_to")
+    t.function_test([
+        t.test("32 is closer to 30", [1,32,30], 32),
+        t.test("28 is closer to 30", [1,28,30], 28),
+        t.test("32 and 48are the same distance to 30", [28,32,30], 0)
+    ])
 t.write(File.basename(__FILE__))

@@ -19,4 +19,14 @@ end
 
 # TODO - write closer_to
 
+def closer_to(a,b,c)
+    if (c - b).abs == (c - a).abs
+        return 0
+    elsif (c - a).abs < (c - b).abs
+        return a
+    else
+        return b
+    end
+end
+
 # TODO - write two_as_one?
