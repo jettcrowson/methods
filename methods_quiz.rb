@@ -30,3 +30,7 @@ def closer_to(a,b,c)
 end
 
 # TODO - write two_as_one?
+
+def two_as_one?(a,b,c)
+    return a + b == c || a + c == b || b + c == a ? true : false
+end
